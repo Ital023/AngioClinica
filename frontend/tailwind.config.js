@@ -51,8 +51,15 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			  'lightMode': {
+				'primary': 'hsl(0, 0%, 98%)', //Light Mode Body Background 
+				'secondary': 'hsl(0, 0%, 52%)',  //Light Mode Input
+				'tertiary': '#112AA0', // Light Mode Text 
+				'quaternary': 'hsl(0, 0%, 100%)' //Light Mode Elements Background
+			  },
   		}
+
   	}
   },
   plugins: [require("tailwindcss-animate")],
