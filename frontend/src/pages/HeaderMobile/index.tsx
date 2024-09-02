@@ -95,6 +95,7 @@ export default function HeaderMobile() {
                     </DropdownMenu>
                   </li>
                   <li>
+                  <a href="https://w.app/AdtlR7" target="_blank" >
                     <button className="bg-lightMode-whatsapp w-26 p-2 rounded flex flex-row items-center justify-center gap-3">
                       <FontAwesomeIcon
                         icon={faSquareWhatsapp}
@@ -105,6 +106,7 @@ export default function HeaderMobile() {
                         MARCAR CONSULTA
                       </span>
                     </button>
+                    </a>
                   </li>
                 </ul>
               </nav>

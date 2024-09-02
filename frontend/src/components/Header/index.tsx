@@ -84,10 +84,14 @@ export default function Header() {
 
       <div className="flex flex-row items-center gap-2">
         <p className="text-base text-lightMode-quaternary font-extrabold">Deseja marcar uma consulta?</p>
+        
+        <a href="https://w.app/AdtlR7" target="_blank">
         <button className="bg-lightMode-whatsapp w-44 py-1 rounded flex flex-row items-center justify-center gap-3">
           <FontAwesomeIcon icon={faSquareWhatsapp} style={{color: "#ffffff",}} className="text-xl"/>
           <span className="font-extrabold text-xs text-lightMode-quaternary">MARCAR CONSULTA</span>
         </button>
+        </a>
+
       </div>
 
       

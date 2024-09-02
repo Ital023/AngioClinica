@@ -76,10 +76,12 @@ export default function HeaderDesktop() {
           </nav>
         </div>
 
+        <a href="https://w.app/AdtlR7" target="_blank">
         <button className="bg-lightMode-whatsapp w-60 py-1 rounded flex flex-row items-center justify-center gap-3">
           <FontAwesomeIcon icon={faSquareWhatsapp} style={{color: "#ffffff",}} className="text-3xl"/>
           <span className="font-extrabold text-base text-lightMode-quaternary">MARCAR CONSULTA</span>
         </button>
+        </a>
         </>
     );
 
