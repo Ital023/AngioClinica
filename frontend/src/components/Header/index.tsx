@@ -1,95 +1,99 @@
-import { faBars, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import HeaderDesktop from "@/pages/HeaderDesktop";
+import HeaderTablet from "@/pages/HeaderTablet";
+import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logoPrincipal from "../../assets/logo principal.png";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link } from "react-router-dom";
-import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
+
 
 export default function Header() {
   return (
-    <header className="bg-lightMode-quaternary h-20 flex justify-center content-center shadow-sm">
-      <div className="container px-4 flex flex-row items-center justify-between h-full">
+    <>
+    <header className="bg-lightMode-quaternary h-20 flex justify-center content-center shadow-sm md:shadow-none lg:shadow-sm">
+      <div className="hidden lg:flex lg:px-2 xl:px-4 lg:flex-row lg:items-center lg:h-full lg:justify-between lg:container">
+        <HeaderDesktop/>
+      </div>
 
-        <div className="flex flex-row justify-center items-center gap-16">
-          <Link to={"/"}>
-            <img src={logoPrincipal} alt="" className="w-32" />
-          </Link>
+      <div className="hidden lg:hidden md:flex md:items-center md:justify-between md:w-full md:px-4">
+        <HeaderTablet />
+      </div>
 
-          <nav>
-            <ul className="flex flex-row items-center gap-8">
-              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
-                INÍCIO
-              </li>
-              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
-                ESPECIALIDADES
-              </li>
-              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
-                CONVÊNIOS
-              </li>
-              <li>
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="outline-none text-lightMode-tertiary text-base font-semibold cursor-pointer">
+
+
+      {/* <button className="md:hidden">
+          <FontAwesomeIcon
+            icon={faBars}
+            className="text-2xl text-lightMode-tertiary"
+          />
+        </button> */}
+    </header>
+    <div className="hidden lg:hidden md:bg-red-900 md:h-10 md:flex md:flex-row md:py-1 md:items-center md:justify-between md:px-5">
+
+    <nav>
+        <ul className="flex flex-row items-center gap-9">
+          <li>
+          <DropdownMenu>
+                  <DropdownMenuTrigger className="outline-none text-lightMode-quaternary text-sm font-semibold cursor-pointer">
                     INSTITUCIONAL{" "}
                     <FontAwesomeIcon
                       icon={faCaretUp}
                       rotation={180}
-                      style={{ color: "#112aa0" }}
+                      style={{ color: "#fff" }}
                     />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="p-3">
-                    <DropdownMenuItem className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                  <DropdownMenuContent className="p-4">
+                    <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
                       QUEM SOMOS
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                    <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
                       GALERIA
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-              </li>
-              <li>
+          </li>
+          <li>
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="outline-none text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                  <DropdownMenuTrigger className="outline-none text-lightMode-quaternary text-sm font-semibold cursor-pointer">
                     FALE CONOSCO{" "}
                     <FontAwesomeIcon
                       icon={faCaretUp}
                       rotation={180}
-                      style={{ color: "#112aa0" }}
+                      style={{ color: "#fff" }}
                     />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="p-3">
-                    <DropdownMenuItem className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                  <DropdownMenuContent className="p-4">
+                    <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
                       CONTATO
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                    <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
                       OUVIDORIA
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
+                    <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
                       TRABALHE CONOSCO
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
-            </ul>
-          </nav>
-        </div>
+        </ul>
+      </nav>
 
-        <button className="bg-lightMode-whatsapp w-60 py-1 rounded flex flex-row items-center justify-center gap-3">
-          <FontAwesomeIcon icon={faSquareWhatsapp} style={{color: "#ffffff",}} className="text-3xl"/>
-          <span className="font-extrabold text-base text-lightMode-quaternary">MARCAR CONSULTA</span>
-        </button>
 
-        <button className="md:hidden">
-          <FontAwesomeIcon
-            icon={faBars}
-            className="text-2xl text-lightMode-tertiary"
-          />
+      <div className="flex flex-row items-center gap-2">
+        <p className="text-base text-lightMode-quaternary font-extrabold">Deseja marcar uma consulta?</p>
+        <button className="bg-lightMode-whatsapp w-44 py-1 rounded flex flex-row items-center justify-center gap-3">
+          <FontAwesomeIcon icon={faSquareWhatsapp} style={{color: "#ffffff",}} className="text-xl"/>
+          <span className="font-extrabold text-xs text-lightMode-quaternary">MARCAR CONSULTA</span>
         </button>
       </div>
-    </header>
+
+      
+
+    </div>
+    </>
   );
 }
