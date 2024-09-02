@@ -9,12 +9,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import HeaderMobile from "@/pages/HeaderMobile";
 
 
 export default function Header() {
   return (
     <>
     <header className="bg-lightMode-quaternary h-20 flex justify-center content-center shadow-sm md:shadow-none lg:shadow-sm">
+
       <div className="hidden lg:flex lg:px-2 xl:px-4 lg:flex-row lg:items-center lg:h-full lg:justify-between lg:container">
         <HeaderDesktop/>
       </div>
@@ -23,14 +25,11 @@ export default function Header() {
         <HeaderTablet />
       </div>
 
+      <div className="flex w-full md:hidden">
+        <HeaderMobile />
+      </div>
 
 
-      {/* <button className="md:hidden">
-          <FontAwesomeIcon
-            icon={faBars}
-            className="text-2xl text-lightMode-tertiary"
-          />
-        </button> */}
     </header>
     <div className="hidden lg:hidden md:bg-red-900 md:h-10 md:flex md:flex-row md:py-1 md:items-center md:justify-between md:px-5">
 
