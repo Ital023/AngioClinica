@@ -56,7 +56,8 @@ export default {
 				'primary': 'hsl(0, 0%, 98%)', //Light Mode Body Background 
 				'secondary': 'hsl(0, 0%, 52%)',  //Light Mode Input
 				'tertiary': '#112AA0', // Light Mode Text 
-				'quaternary': 'hsl(0, 0%, 100%)' //Light Mode Elements Background
+				'quaternary': 'hsl(0, 0%, 100%)', //Light Mode Elements Background
+				'whatsapp': "#25D366"
 			  },
   		}
 
