@@ -11,11 +11,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function HeaderMobile() {
@@ -52,47 +53,15 @@ export default function HeaderMobile() {
                     CONVÊNIOS
                   </li>
                   <li className="text-start">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className="outline-none text-lightMode-tertiary text-base font-semibold cursor-pointer ">
-                        INSTITUCIONAL{" "}
-                        <FontAwesomeIcon
-                          icon={faCaretUp}
-                          rotation={180}
-                          style={{ color: "#112aa0" }}
-                        />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="p-4">
-                        <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
-                          QUEM SOMOS
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
-                          GALERIA
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+
+
+
+                    
                   </li>
                   <li className="text-start">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className="outline-none text-lightMode-tertiary text-base font-semibold cursor-pointer">
-                        FALE CONOSCO{" "}
-                        <FontAwesomeIcon
-                          icon={faCaretUp}
-                          rotation={180}
-                          style={{ color: "#112aa0" }}
-                        />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="p-4 ml-5">
-                        <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
-                          CONTATO
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
-                          OUVIDORIA
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
-                          TRABALHE CONOSCO
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                    
+
+
                   </li>
                   <li>
                   <a href="https://w.app/AdtlR7" target="_blank" >

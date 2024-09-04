@@ -13,13 +13,13 @@ export default function HeaderTablet() {
         <div className="flex flex-row items-center">
           <nav>
             <ul className="flex flex-row items-center gap-4 xl:gap-8">
-              <li className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
+              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
                 INÍCIO
               </li>
-              <li className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
+              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
                 ESPECIALIDADES
               </li>
-              <li className="text-lightMode-tertiary text-sm font-semibold cursor-pointer">
+              <li className="text-lightMode-tertiary text-base font-semibold cursor-pointer">
                 CONVÊNIOS
               </li>
             </ul>

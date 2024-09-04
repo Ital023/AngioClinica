@@ -52,15 +52,36 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			  'lightMode': {
-				'primary': 'hsl(0, 0%, 98%)', //Light Mode Body Background 
-				'secondary': 'hsl(0, 0%, 52%)',  //Light Mode Input
-				'tertiary': '#112AA0', // Light Mode Text 
-				'quaternary': 'hsl(0, 0%, 100%)', //Light Mode Elements Background
-				'whatsapp': "#25D366"
-			  },
+  			lightMode: {
+  				primary: 'hsl(0, 0%, 98%)',
+  				secondary: 'hsl(0, 0%, 52%)',
+  				tertiary: '#112AA0',
+  				quaternary: 'hsl(0, 0%, 100%)',
+  				whatsapp: '#25D366'
+  			}
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
-
   	}
   },
   plugins: [require("tailwindcss-animate")],
