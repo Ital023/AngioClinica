@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/accordion"
 
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import AccordionDropdownMobileHeader from "@/components/Header/AccordionDropdownMobileHeader";
 
 export default function HeaderMobile() {
   return (
@@ -35,7 +36,7 @@ export default function HeaderMobile() {
             />
           </button>
         </SheetTrigger>
-        <SheetContent side={"left"}>
+        <SheetContent side={"left"} className="overflow-y-auto">
           <SheetHeader>
             <SheetTitle>
               <img src={logoPrincipal} alt="" className="w-32" />
@@ -53,19 +54,17 @@ export default function HeaderMobile() {
                     CONVÊNIOS
                   </li>
                   <li className="text-start">
-
-
-
+                    <AccordionDropdownMobileHeader title="INSTITUCIONAL" elements={["QUEM SOMOS", "GALERIA"]}/>
                     
                   </li>
                   <li className="text-start">
                     
-
+                  <AccordionDropdownMobileHeader title="FALE CONOSCO" elements={["CONTATO", "OUVIDORIA", "TRABALHE CONOSCO"]}/>
 
                   </li>
                   <li>
-                  <a href="https://w.app/AdtlR7" target="_blank" >
-                    <button className="bg-lightMode-whatsapp w-26 p-2 rounded flex flex-row items-center justify-center gap-3">
+                  <a href="https://w.app/AdtlR7" target="_blank">
+                    <button className="bg-lightMode-whatsapp w-full p-2 rounded flex flex-row items-center justify-center gap-3">
                       <FontAwesomeIcon
                         icon={faSquareWhatsapp}
                         style={{ color: "#ffffff" }}
