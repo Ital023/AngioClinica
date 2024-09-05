@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoPrincipal from "../../assets/logo principal.png";
-import { faBars, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Sheet,
@@ -10,12 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+
 
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import AccordionDropdownMobileHeader from "@/components/Header/AccordionDropdownMobileHeader";
